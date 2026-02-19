@@ -1,0 +1,32 @@
+<div class="container">
+  <input [(ngModel)]="studentName" placeholder="Enter Name">
+  
+  <h1>Student: {{ studentName }}</h1>
+  <p>Current Score: {{ score }}</p>
+  
+  <input 
+    type="number" 
+    [max]="100" 
+    [attr.aria-label]="'Score input field'"
+    (input)="onScoreInput($event)">
+
+  <button [disabled]="score < 0">Submit Grades</button>
+
+  <h2 [style.color]="gradeColor">
+    Letter Grade: {{ getLetterGrade() }}
+  </h2>
+
+  <div [class.passing]="score >= 60" [class.failing]="score < 60">
+    Status: {{ score >= 60 ? 'PASSING' : 'FAILING' }}
+  </div>
+
+  <table [style.border]="'1px solid black'">
+    <tr>
+      <td [attr.colspan]="colSpan">Grade Report Details</td>
+    </tr>
+    <tr>
+      <td>Final Result</td>
+      <td>{{ getLetterGrade() }}</td>
+    </tr>
+  </table>
+</div>
