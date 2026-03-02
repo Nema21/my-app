@@ -4,6 +4,8 @@ import { AboutComponent } from './comps/about/about.component';
 import { HomeComponent } from './comps/home/home.component';
 import { UserInteractionComponent } from './user-interaction/user-interaction.component';
 import { GradeCalculatorComponent } from './grade-calculator/grade-calculator.component';
+import { PropertyBinding } from './comps/property-binding/property-binding.component';
+import { InterpolationComponent } from './comps/interpolation/interpolation.component';
 
 export const routes: Routes = [
     {
@@ -19,6 +21,8 @@ export const routes: Routes = [
         component: HomeComponent
     },
     {path: 'user-interaction', component:UserInteractionComponent},
-    {path: 'grade-calculator', component: GradeCalculatorComponent}
+    {path: 'grade-calculator', component: GradeCalculatorComponent},
+    {path: 'interpolation', component: InterpolationComponent},
+    {path: 'property-binding', component: PropertyBinding}
 
 ];
